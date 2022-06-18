@@ -71,86 +71,6 @@
       <div class="outer">
         <section id="main">
   
-    <article id="post-CS61B-HW0-A-Java-Crash-Course" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/2022/06/18/CS61B-HW0-A-Java-Crash-Course/" class="article-date">
-  <time class="dt-published" datetime="2022-06-18T10:50:49.000Z" itemprop="datePublished">2022-06-18</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/2022/06/18/CS61B-HW0-A-Java-Crash-Course/">test</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="type">boolean</span> <span class="title function_">tilt</span><span class="params">(Side side)</span> &#123;</span><br><span class="line">    <span class="type">boolean</span> changed;</span><br><span class="line">    changed = <span class="literal">false</span>;</span><br><span class="line"></span><br><span class="line">    <span class="comment">//act as if Side side is north.</span></span><br><span class="line">    board.setViewingPerspective(side);</span><br><span class="line"></span><br><span class="line">    <span class="comment">// <span class="doctag">TODO:</span> Modify this.board (and perhaps this.score) to account</span></span><br><span class="line">    <span class="comment">// for the tilt to the Side SIDE. If the board changed, set the</span></span><br><span class="line">    <span class="comment">// changed local variable to true.</span></span><br><span class="line"></span><br><span class="line">    <span class="comment">//Step 1:Find row number joint to non-null tile when moving up.</span></span><br><span class="line">    <span class="comment">// [x, 2, 2, x] -&gt; [2, 2, x, x]</span></span><br><span class="line">    <span class="comment">// skip merging this step.</span></span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> <span class="variable">c</span> <span class="operator">=</span> <span class="number">0</span>; c &lt; board.size(); c ++) &#123;</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> <span class="variable">r</span> <span class="operator">=</span> board.size() - <span class="number">1</span>; r &gt;= <span class="number">0</span>; r --) &#123;</span><br><span class="line">            <span class="type">Tile</span> <span class="variable">t</span> <span class="operator">=</span> board.tile(c, r);</span><br><span class="line">            <span class="keyword">if</span> (t != <span class="literal">null</span>) &#123;</span><br><span class="line">                <span class="type">int</span> <span class="variable">rd</span> <span class="operator">=</span> r;</span><br><span class="line">                <span class="keyword">while</span> (rd &lt; board.size() - <span class="number">1</span> &amp;&amp; board.tile(c, rd + <span class="number">1</span>) == <span class="literal">null</span>) &#123;</span><br><span class="line">                    rd ++;</span><br><span class="line">                &#125;</span><br><span class="line">                board.move(c, rd, t);</span><br><span class="line">                changed = <span class="literal">true</span>;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
-
-<p>This is a test of code block.</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://shawnsuun.github.io/2022/06/18/CS61B-HW0-A-Java-Crash-Course/" data-id="cl4k02tap00014so31a4uefw2" data-title="test" class="article-share-link">Share</a>
-      
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-
-  
-    <article id="post-CS61B-HW0-A-Java-Crash-Course-1" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/2022/06/18/CS61B-HW0-A-Java-Crash-Course-1/" class="article-date">
-  <time class="dt-published" datetime="2022-06-18T10:50:49.000Z" itemprop="datePublished">2022-06-18</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/2022/06/18/CS61B-HW0-A-Java-Crash-Course-1/">test</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="type">boolean</span> <span class="title function_">tilt</span><span class="params">(Side side)</span> &#123;</span><br><span class="line">    <span class="type">boolean</span> changed;</span><br><span class="line">    changed = <span class="literal">false</span>;</span><br><span class="line"></span><br><span class="line">    <span class="comment">//act as if Side side is north.</span></span><br><span class="line">    board.setViewingPerspective(side);</span><br><span class="line"></span><br><span class="line">    <span class="comment">// <span class="doctag">TODO:</span> Modify this.board (and perhaps this.score) to account</span></span><br><span class="line">    <span class="comment">// for the tilt to the Side SIDE. If the board changed, set the</span></span><br><span class="line">    <span class="comment">// changed local variable to true.</span></span><br><span class="line"></span><br><span class="line">    <span class="comment">//Step 1:Find row number joint to non-null tile when moving up.</span></span><br><span class="line">    <span class="comment">// [x, 2, 2, x] -&gt; [2, 2, x, x]</span></span><br><span class="line">    <span class="comment">// skip merging this step.</span></span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> <span class="variable">c</span> <span class="operator">=</span> <span class="number">0</span>; c &lt; board.size(); c ++) &#123;</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> <span class="variable">r</span> <span class="operator">=</span> board.size() - <span class="number">1</span>; r &gt;= <span class="number">0</span>; r --) &#123;</span><br><span class="line">            <span class="type">Tile</span> <span class="variable">t</span> <span class="operator">=</span> board.tile(c, r);</span><br><span class="line">            <span class="keyword">if</span> (t != <span class="literal">null</span>) &#123;</span><br><span class="line">                <span class="type">int</span> <span class="variable">rd</span> <span class="operator">=</span> r;</span><br><span class="line">                <span class="keyword">while</span> (rd &lt; board.size() - <span class="number">1</span> &amp;&amp; board.tile(c, rd + <span class="number">1</span>) == <span class="literal">null</span>) &#123;</span><br><span class="line">                    rd ++;</span><br><span class="line">                &#125;</span><br><span class="line">                board.move(c, rd, t);</span><br><span class="line">                changed = <span class="literal">true</span>;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://shawnsuun.github.io/2022/06/18/CS61B-HW0-A-Java-Crash-Course-1/" data-id="cl4k0506m0000noo3hbyme52j" data-title="test" class="article-share-link">Share</a>
-      
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-
-  
     <article id="post-hello-world" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-meta">
     <a href="/2022/06/18/hello-world/" class="article-date">
@@ -190,7 +110,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://shawnsuun.github.io/2022/06/18/hello-world/" data-id="cl4k02taj00004so3b0hb6uks" data-title="Hello World" class="article-share-link">Share</a>
+      <a data-url="http://shawnsuun.github.io/2022/06/18/hello-world/" data-id="cl4k09k0g0000z8o3auheh67w" data-title="Hello World" class="article-share-link">Share</a>
       
       
       
@@ -231,14 +151,6 @@
     <h3 class="widget-title">Recent Posts</h3>
     <div class="widget">
       <ul>
-        
-          <li>
-            <a href="/2022/06/18/CS61B-HW0-A-Java-Crash-Course/">test</a>
-          </li>
-        
-          <li>
-            <a href="/2022/06/18/CS61B-HW0-A-Java-Crash-Course-1/">test</a>
-          </li>
         
           <li>
             <a href="/2022/06/18/hello-world/">Hello World</a>
